@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unlock premium rewards, sweepstakes, surveys, jobs, finance offers, and mobile app rewards. Start earning today with trusted exclusive opportunities.">
+    <meta name="keywords" content="CPA offers, rewards, sweepstakes, surveys, jobs, finance, mobile apps, affiliate">
+    <title>PremiumRewards — Unlock Exclusive Offers & Rewards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0F172A;
+            --bg-secondary: #111827;
+            --bg-purple: #1E1B4B;
+            --grad-purple-blue: linear-gradient(135deg, #8B5CF6, #3B82F6);
+            --grad-blue-cyan: linear-gradient(135deg, #3B82F6, #06B6D4);
+            --grad-violet-pink: linear-gradient(135deg, #7C3AED, #EC4899);
+            --grad-mixed: linear-gradient(135deg, #8B5CF6, #3B82F6, #06B6D4);
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --card-bg: rgba(30, 27, 75, 0.4);
+            --card-border: rgba(139, 92, 246, 0.15);
+            --glass-bg: rgba(15, 23, 42, 0.7);
+            --glass-border: rgba(139, 92, 246, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+
+        ::selection {
+            background: rgba(139, 92, 246, 0.4);
+            color: #fff;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb {
+            background: var(--grad-purple-blue);
+            border-radius: 10px;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar-custom {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 0.75rem 0;
+            transition: all 0.3s ease;
+            z-index: 1050;
+        }
+
+        .navbar-custom.scrolled {
+            padding: 0.5rem 0;
+            background: rgba(15, 23, 42, 0.92);
+            box-shadow: 0 4px 30px rgba(139, 92, 246, 0.1);
+        }
+
+        .navbar-brand-custom {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            background: var(--grad-purple-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .navbar-brand-custom span {
+            -webkit-text-fill-color: #F8FAFC;
+        }
+
+        .nav-link-custom {
+            color: var(--text-secondary) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link-custom:hover,
+        .nav-link-custom.active {
+            color: #F8FAFC !important;
+        }
+
+        .nav-link-custom::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--grad-purple-blue);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link-custom:hover::after,
+        .nav-link-custom.active::after {
+            width: 60%;
+        }
+
+        .navbar-toggler-custom {
+            border: 1px solid var(--glass-border);
+            padding: 0.4rem 0.6rem;
+            border-radius: 8px;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .navbar-toggler-custom .bi { color: var(--text-primary); font-size: 1.4rem; }
+
+        /* ===== HERO ===== */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--bg-primary);
+        }
+
+        .hero-bg-gradient {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 40%, rgba(139, 92, 246, 0.15), transparent),
+                radial-gradient(ellipse 60% 50% at 20% 80%, rgba(59, 130, 246, 0.1), transparent),
+                radial-gradient(ellipse 60% 50% at 80% 20%, rgba(236, 72, 153, 0.08), transparent);
+            animation: heroGradientShift 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGradientShift {
+            0% { opacity: 0.7; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .hero-grid-bg {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent);
+            -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent);
+        }
+
+        #particles-canvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.2;
+            animation: glowFloat 6s ease-in-out infinite alternate;
+        }
+
+        .hero-glow-1 {
+            background: #8B5CF6;
+            top: -100px;
+            right: -100px;
+        }
+
+        .hero-glow-2 {
+            background: #3B82F6;
+            bottom: -150px;
+            left: -100px;
+            animation-delay: -3s;
+        }
+
+        @keyframes glowFloat {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(30px, -20px) scale(1.1); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding-top: 100px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(139, 92, 246, 0.12);
+            border: 1px solid rgba(139, 92, 246, 0.25);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #A78BFA;
+            margin-bottom: 1.5rem;
+            animation: fadeInDown 0.8s ease forwards;
+        }
+
+        .hero-badge .pulse-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22C55E;
+            animation: pulseDot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero-title .gradient-text {
+            background: var(--grad-mixed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        .hero-stats-inline {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(139, 92, 246, 0.1);
+            animation: fadeInUp 0.8s ease 0.8s forwards;
+            opacity: 0;
+        }
+
+        .hero-stat-item h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--grad-purple-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-stat-item p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 1s ease 0.5s forwards;
+            opacity: 0;
+        }
+
+        .hero-card-float {
+            position: relative;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 2rem;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .hero-card-float::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 24px;
+            background: var(--grad-purple-blue);
+            opacity: 0.15;
+            z-index: -1;
+            filter: blur(20px);
+        }
+
+        .float-icon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .float-icon-item {
+            aspect-ratio: 1;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .float-icon-item:hover { transform: scale(1.1) rotate(5deg); }
+
+        .float-icon-item:nth-child(1) { background: rgba(139, 92, 246, 0.2); color: #A78BFA; }
+        .float-icon-item:nth-child(2) { background: rgba(59, 130, 246, 0.2); color: #60A5FA; }
+        .float-icon-item:nth-child(3) { background: rgba(6, 182, 212, 0.2); color: #22D3EE; }
+        .float-icon-item:nth-child(4) { background: rgba(236, 72, 153, 0.2); color: #F472B6; }
+        .float-icon-item:nth-child(5) { background: rgba(34, 197, 94, 0.2); color: #4ADE80; }
+        .float-icon-item:nth-child(6) { background: rgba(251, 191, 36, 0.2); color: #FBBF24; }
+
+        .hero-card-reward {
+            background: rgba(139, 92, 246, 0.08);
+            border-radius: 16px;
+            padding: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .reward-amount {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--grad-violet-pink);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .reward-label { font-size: 0.8rem; color: var(--text-secondary); }
+        .reward-sub { font-size: 0.7rem; color: var(--text-muted); }
+
+        .floating-element {
+            position: absolute;
+            animation: floatBounce 4s ease-in-out infinite;
+        }
+
+        .floating-el-1 { top: -20px; right: -20px; font-size: 2rem; animation-delay: 0s; }
+        .floating-el-2 { bottom: 30px; left: -30px; font-size: 1.5rem; animation-delay: -1.5s; }
+        .floating-el-3 { top: 40%; right: -25px; font-size: 1.8rem; animation-delay: -3s; }
+
+        @keyframes floatBounce {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn-grad {
+            background: var(--grad-purple-blue);
+            color: #fff;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 1;
+        }
+
+        .btn-grad::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #7C3AED, #2563EB);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn-grad:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+            color: #fff;
+        }
+
+        .btn-grad:hover::before { opacity: 1; }
+
+        .btn-grad-blue {
+            background: var(--grad-blue-cyan);
+        }
+
+        .btn-grad-blue::before {
+            background: linear-gradient(135deg, #2563EB, #0891B2);
+        }
+
+        .btn-grad-blue:hover {
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-grad-pink {
+            background: var(--grad-violet-pink);
+        }
+
+        .btn-grad-pink::before {
+            background: linear-gradient(135deg, #6D28D9, #DB2777);
+        }
+
+        .btn-grad-pink:hover {
+            box-shadow: 0 8px 30px rgba(236, 72, 153, 0.4);
+        }
+
+        .btn-outline-grad {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            padding: 14px 32px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline-grad:hover {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: rgba(139, 92, 246, 0.4);
+            transform: translateY(-3px);
+            color: #fff;
+        }
+
+        .btn-sm-grad {
+            padding: 10px 22px;
+            font-size: 0.85rem;
+            border-radius: 12px;
+        }
+
+        /* ===== URGENCY BANNER ===== */
+        .urgency-banner {
+            background: linear-gradient(90deg, rgba(239, 68, 68, 0.15), rgba(251, 191, 36, 0.15), rgba(239, 68, 68, 0.15));
+            border-top: 1px solid rgba(239, 68, 68, 0.2);
+            border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+            padding: 10px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .urgency-scroll {
+            display: flex;
+            animation: scrollUrgency 25s linear infinite;
+            white-space: nowrap;
+        }
+
+        .urgency-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0 2rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #FBBF24;
+            flex-shrink: 0;
+        }
+
+        .urgency-item i { color: #EF4444; }
+
+        @keyframes scrollUrgency {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ===== SECTION COMMON ===== */
+        .section-padding { padding: 100px 0; }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #A78BFA;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .section-label .line {
+            width: 30px;
+            height: 2px;
+            background: var(--grad-purple-blue);
+            border-radius: 2px;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.15;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        /* ===== OFFER CARDS ===== */
+        .offer-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2rem 1.75rem;
+            height: 100%;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offer-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--grad-purple-blue);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(139, 92, 246, 0.35);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.12);
+        }
+
+        .offer-card:hover::before { opacity: 1; }
+
+        .offer-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            position: relative;
+        }
+
+        .offer-icon::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 20px;
+            opacity: 0.15;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        .offer-icon-purple { background: rgba(139, 92, 246, 0.15); color: #A78BFA; }
+        .offer-icon-purple::after { background: #8B5CF6; }
+        .offer-icon-blue { background: rgba(59, 130, 246, 0.15); color: #60A5FA; }
+        .offer-icon-blue::after { background: #3B82F6; }
+        .offer-icon-cyan { background: rgba(6, 182, 212, 0.15); color: #22D3EE; }
+        .offer-icon-cyan::after { background: #06B6D4; }
+        .offer-icon-pink { background: rgba(236, 72, 153, 0.15); color: #F472B6; }
+        .offer-icon-pink::after { background: #EC4899; }
+        .offer-icon-green { background: rgba(34, 197, 94, 0.15); color: #4ADE80; }
+        .offer-icon-green::after { background: #22C55E; }
+        .offer-icon-amber { background: rgba(251, 191, 36, 0.15); color: #FBBF24; }
+        .offer-icon-amber::after { background: #FBBF24; }
+
+        .offer-card h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .offer-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .limited-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(239, 68, 68, 0.15);
+            color: #F87171;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        /* ===== WHY CHOOSE US ===== */
+        .why-section {
+            background: linear-gradient(180deg, var(--bg-primary), var(--bg-purple), var(--bg-primary));
+            position: relative;
+        }
+
+        .why-card {
+            background: rgba(30, 27, 75, 0.3);
+            border: 1px solid rgba(139, 92, 246, 0.08);
+            border-radius: 16px;
+            padding: 1.75rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .why-card:hover {
+            background: rgba(30, 27, 75, 0.5);
+            border-color: rgba(139, 92, 246, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .why-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: var(--grad-purple-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 0 auto 1rem;
+        }
+
+        .why-card h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .why-card p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* ===== STATS ===== */
+        .stats-section {
+            background: linear-gradient(135deg, var(--bg-purple), var(--bg-secondary), var(--bg-purple));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 40% 50% at 20% 50%, rgba(139, 92, 246, 0.12), transparent),
+                radial-gradient(ellipse 40% 50% at 80% 50%, rgba(59, 130, 246, 0.08), transparent);
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            font-weight: 800;
+            background: var(--grad-mixed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .step-card {
+            text-align: center;
+            position: relative;
+            padding: 2rem 1.5rem;
+        }
+
+        .step-number {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--grad-purple-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+        }
+
+        .step-connector {
+            position: absolute;
+            top: 2rem;
+            left: calc(50% + 40px);
+            width: calc(100% - 80px);
+            height: 2px;
+            background: linear-gradient(90deg, rgba(139, 92, 246, 0.4), rgba(59, 130, 246, 0.4));
+            z-index: 0;
+        }
+
+        .step-connector::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #3B82F6;
+            animation: connectorPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes connectorPulse {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        .step-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .step-icon {
+            font-size: 1.5rem;
+            color: #A78BFA;
+            margin-bottom: 0.75rem;
+        }
+
+        /* ===== FEATURED OFFERS CAROUSEL ===== */
+        .featured-section {
+            background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
+        }
+
+        .featured-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.1);
+        }
+
+        .featured-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .featured-body {
+            padding: 1.5rem;
+        }
+
+        .featured-body h5 {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-body p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .featured-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .featured-payout {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: #4ADE80;
+            font-size: 1.1rem;
+        }
+
+        .featured-type {
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 50px;
+            background: rgba(139, 92, 246, 0.12);
+            color: #A78BFA;
+            font-weight: 600;
+        }
+
+        .carousel-controls-custom {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .carousel-btn-custom {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .carousel-btn-custom:hover {
+            background: var(--grad-purple-blue);
+            border-color: transparent;
+            transform: scale(1.05);
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonial-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            border-color: rgba(139, 92, 246, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .testimonial-card .quote-icon {
+            font-size: 2rem;
+            color: rgba(139, 92, 246, 0.2);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-stars {
+            color: #FBBF24;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* ===== LEAD CAPTURE ===== */
+        .lead-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lead-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 50% 70% at 50% 50%, rgba(139, 92, 246, 0.1), transparent);
+        }
+
+        .lead-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 28px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .lead-card::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: var(--grad-purple-blue);
+            border-radius: 2px;
+        }
+
+        .lead-card::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 250px;
+            height: 250px;
+            background: rgba(139, 92, 246, 0.08);
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+
+        .form-floating-custom {
+            position: relative;
+            margin-bottom: 1.25rem;
+        }
+
+        .form-input-custom {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(30, 27, 75, 0.4);
+            border: 1px solid rgba(139, 92, 246, 0.15);
+            border-radius: 14px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .form-input-custom::placeholder {
+            color: var(--text-muted);
+        }
+
+        .form-input-custom:focus {
+            border-color: rgba(139, 92, 246, 0.5);
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+        }
+
+        .form-input-custom.error {
+            border-color: rgba(239, 68, 68, 0.5);
+        }
+
+        .form-error {
+            font-size: 0.75rem;
+            color: #F87171;
+            margin-top: 6px;
+            display: none;
+        }
+
+        .form-error.visible { display: block; }
+
+        .form-select-custom {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394A3B8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+
+        .form-select-custom option {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .form-success.visible { display: block; }
+
+        .success-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ADE80;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            animation: successPop 0.5s ease;
+        }
+
+        @keyframes successPop {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .form-privacy {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .form-privacy a {
+            color: #A78BFA;
+            text-decoration: none;
+        }
+
+        .form-privacy a:hover { text-decoration: underline; }
+
+        /* ===== TRUST SECTION ===== */
+        .trust-section {
+            background: var(--bg-secondary);
+        }
+
+        .trust-badge {
+            text-align: center;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .trust-badge:hover { transform: translateY(-3px); }
+
+        .trust-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin: 0 auto 0.75rem;
+            position: relative;
+        }
+
+        .trust-icon-ssl { background: rgba(34, 197, 94, 0.15); color: #4ADE80; }
+        .trust-icon-verified { background: rgba(59, 130, 246, 0.15); color: #60A5FA; }
+        .trust-icon-privacy { background: rgba(139, 92, 246, 0.15); color: #A78BFA; }
+        .trust-icon-trusted { background: rgba(251, 191, 36, 0.15); color: #FBBF24; }
+
+        .trust-badge h6 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .trust-badge p {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .trust-icon .check-badge {
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #22C55E;
+            color: #fff;
+            font-size: 0.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--bg-secondary);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: linear-gradient(180deg, var(--bg-primary), #080D1A);
+            border-top: 1px solid rgba(139, 92, 246, 0.08);
+            padding: 60px 0 0;
+        }
+
+        .footer-brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            background: var(--grad-purple-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .footer-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            max-width: 300px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: rgba(139, 92, 246, 0.08);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .footer-social a:hover {
+            background: var(--grad-purple-blue);
+            color: #fff;
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        .footer-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: var(--text-primary);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li { margin-bottom: 0.6rem; }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #A78BFA;
+            padding-left: 4px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer-contact-item i {
+            color: #A78BFA;
+            width: 16px;
+            text-align: center;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(139, 92, 246, 0.06);
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-bottom p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .footer-bottom a {
+            color: #A78BFA;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover { text-decoration: underline; }
+
+        /* ===== STICKY MOBILE CTA ===== */
+        .sticky-mobile-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid var(--glass-border);
+            padding: 12px 16px;
+            z-index: 1040;
+            display: none;
+        }
+
+        .sticky-mobile-cta .btn-grad {
+            width: 100%;
+            justify-content: center;
+            padding: 14px;
+            font-size: 1rem;
+        }
+
+        /* ===== RECENT ACTIVITY ===== */
+        .activity-notification {
+            position: fixed;
+            bottom: 100px;
+            left: 16px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            padding: 12px 16px;
+            z-index: 1030;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transform: translateX(-120%);
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            max-width: 320px;
+        }
+
+        .activity-notification.show { transform: translateX(0); }
+
+        .activity-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .activity-text {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .activity-text strong { color: var(--text-primary); }
+
+        .activity-time {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+        }
+
+        /* ===== EXIT INTENT POPUP ===== */
+        .exit-popup-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .exit-popup-overlay.visible {
+            display: flex;
+        }
+
+        .exit-popup {
+            background: linear-gradient(135deg, var(--bg-purple), var(--bg-secondary));
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            max-width: 460px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            animation: popupIn 0.4s ease;
+        }
+
+        @keyframes popupIn {
+            from { opacity: 0; transform: scale(0.9) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .exit-popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: color 0.3s;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .exit-popup-close:hover {
+            color: var(--text-primary);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .exit-popup-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: var(--grad-violet-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #fff;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 0 40px rgba(236, 72, 153, 0.3);
+        }
+
+        .exit-popup h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .exit-popup p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .exit-popup .form-input-custom {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 991.98px) {
+            .hero-visual { margin-top: 3rem; }
+            .step-connector { display: none; }
+            .section-padding { padding: 70px 0; }
+        }
+
+        @media (max-width: 767.98px) {
+            .sticky-mobile-cta { display: block; }
+            .hero-stats-inline { gap: 1.5rem; }
+            .hero-stat-item h3 { font-size: 1.2rem; }
+            .lead-card { padding: 2rem 1.5rem; }
+            .section-padding { padding: 60px 0; }
+            .activity-notification { display: none !important; }
+            body { padding-bottom: 70px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ===== FEATURED CAROUSEL TRACK ===== */
+        .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: hidden;
+            scroll-snap-type: x mandatory;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .carousel-track::-webkit-scrollbar { display: none; }
+
+        .carousel-track .featured-card {
+            flex: 0 0 calc(33.333% - 1rem);
+            scroll-snap-align: start;
+        }
+
+        @media (max-width: 991.98px) {
+            .carousel-track .featured-card { flex: 0 0 calc(50% - 0.75rem); }
+        }
+
+        @media (max-width: 575.98px) {
+            .carousel-track .featured-card { flex: 0 0 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand-custom" href="#">Premium<span>Rewards</span></a>
+            <button class="navbar-toggler-custom d-lg-none" type="button" id="navToggler" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#offers">Offers</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link nav-link-custom" href="#why">Rewards</a></li> -->
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-grad btn-sm-grad" href="#lead">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero-section" id="hero" aria-label="Hero">
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-grid-bg"></div>
+        <canvas id="particles-canvas" aria-hidden="true"></canvas>
+        <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        Limited Time — 2x Rewards Active
+                    </div>
+                    <h1 class="hero-title">
+                        Unlock <span class="gradient-text">Premium Rewards</span> & Exclusive Opportunities
+                    </h1>
+                    <p class="hero-subtitle">
+                        Complete simple offers, surveys, app installs, and career opportunities to start earning today.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#lead" class="btn btn-grad">
+                            <i class="fas fa-bolt"></i> Get Started Now
+                        </a>
+                        <a href="#offers" class="btn btn-outline-grad">
+                            <i class="fas fa-grid-2"></i> Explore Offers
+                        </a>
+                    </div>
+                    <div class="hero-stats-inline">
+                        <div class="hero-stat-item">
+                            <h3>500K+</h3>
+                            <p>Active Users</p>
+                        </div>
+                        <div class="hero-stat-item">
+                            <h3>$2.5M+</h3>
+                            <p>Rewards Paid</p>
+                        </div>
+                        <div class="hero-stat-item">
+                            <h3>4.9★</h3>
+                            <p>User Rating</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="floating-element floating-el-1" aria-hidden="true">🎁</div>
+                        <div class="floating-element floating-el-2" aria-hidden="true">💰</div>
+                        <div class="floating-element floating-el-3" aria-hidden="true">📱</div>
+                        <div class="hero-card-float">
+                            <div class="float-icon-grid">
+                                <div class="float-icon-item"><i class="fas fa-gift"></i></div>
+                                <div class="float-icon-item"><i class="fas fa-dollar-sign"></i></div>
+                                <div class="float-icon-item"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="float-icon-item"><i class="fas fa-clipboard-list"></i></div>
+                                <div class="float-icon-item"><i class="fas fa-trophy"></i></div>
+                                <div class="float-icon-item"><i class="fas fa-credit-card"></i></div>
+                            </div>
+                            <div class="hero-card-reward">
+                                <div>
+                                    <div class="reward-amount">$127.50</div>
+                                    <div class="reward-label">Available Rewards</div>
+                                    <div class="reward-sub">Complete offers to unlock</div>
+                                </div>
+                                <div class="ms-auto text-end">
+                                    <div style="font-size: 0.75rem; color: #4ADE80; font-weight: 600;">+12.5%</div>
+                                    <div style="font-size: 0.65rem; color: var(--text-muted);">This week</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== URGENCY BANNER ===== -->
+    <div class="urgency-banner" role="marquee" aria-label="Urgency notifications">
+        <div class="urgency-scroll">
+            <span class="urgency-item"><i class="fas fa-fire"></i> Sarah from NY just earned $50 — 2 min ago</span>
+            <span class="urgency-item"><i class="fas fa-bolt"></i> Flash Offer: 3x Cashback ends in 4 hours</span>
+            <span class="urgency-item"><i class="fas fa-fire"></i> Mike from CA claimed a $100 gift card — 5 min ago</span>
+            <span class="urgency-item"><i class="fas fa-bolt"></i> New: 50 premium survey slots added</span>
+            <span class="urgency-item"><i class="fas fa-fire"></i> Jessica from TX won today's sweepstakes — 8 min ago</span>
+            <span class="urgency-item"><i class="fas fa-bolt"></i> Limited: Double rewards on all app installs</span>
+            <span class="urgency-item"><i class="fas fa-fire"></i> Sarah from NY just earned $50 — 2 min ago</span>
+            <span class="urgency-item"><i class="fas fa-bolt"></i> Flash Offer: 3x Cashback ends in 4 hours</span>
+            <span class="urgency-item"><i class="fas fa-fire"></i> Mike from CA claimed a $100 gift card — 5 min ago</span>
+            <span class="urgency-item"><i class="fas fa-bolt"></i> New: 50 premium survey slots added</span>
+            <span class="urgency-item"><i class="fas fa-fire"></i> Jessica from TX won today's sweepstakes — 8 min ago</span>
+            <span class="urgency-item"><i class="fas fa-bolt"></i> Limited: Double rewards on all app installs</span>
+        </div>
+    </div>
+
+    <!-- ===== OFFERS SECTION ===== -->
+    <section class="section-padding" id="offers" aria-label="Offer Categories">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <div class="section-label"><span class="line"></span> Our Categories <span class="line"></span></div>
+                <h2 class="section-title">Browse Premium <span class="gradient-text">Offer Categories</span></h2>
+                <p class="section-subtitle">Choose from a wide range of high-converting offers tailored to your interests and earning goals.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Rewards -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="offer-card">
+                        <span class="limited-badge">Hot</span>
+                        <div class="offer-icon offer-icon-purple">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h4>Rewards</h4>
+                        <p>Earn gift cards, cashback rewards, and exclusive bonuses from trusted partners.</p>
+                        <a href="#lead" class="btn btn-grad btn-sm-grad w-100">
+                            <i class="fas fa-arrow-right"></i> Claim Rewards
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sweepstakes -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="offer-card">
+                        <div class="offer-icon offer-icon-blue">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>Sweepstakes</h4>
+                        <p>Enter exciting giveaways and get chances to win amazing prizes every day.</p>
+                        <a href="#lead" class="btn btn-grad-blue btn-grad btn-sm-grad w-100">
+                            <i class="fas fa-arrow-right"></i> Join Sweepstakes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Surveys -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="offer-card">
+                        <span class="limited-badge">Trending</span>
+                        <div class="offer-icon offer-icon-cyan">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h4>Surveys</h4>
+                        <p>Share your opinion and earn rewards by completing quick surveys.</p>
+                        <a href="#lead" class="btn btn-grad btn-sm-grad w-100" style="background: var(--grad-blue-cyan);">
+                            <i class="fas fa-arrow-right"></i> Start Surveys
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jobs & Careers -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="offer-card">
+                        <div class="offer-icon offer-icon-pink">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>Jobs & Careers</h4>
+                        <p>Discover flexible remote jobs and career opportunities from top companies.</p>
+                        <a href="#lead" class="btn btn-grad-pink btn-grad btn-sm-grad w-100">
+                            <i class="fas fa-arrow-right"></i> Browse Jobs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Finance -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="offer-card">
+                        <div class="offer-icon offer-icon-green">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Finance</h4>
+                        <p>Explore credit, loans, insurance, and financial opportunities available today.</p>
+                        <a href="#lead" class="btn btn-grad btn-sm-grad w-100" style="background: linear-gradient(135deg, #22C55E, #06B6D4);">
+                            <i class="fas fa-arrow-right"></i> View Finance Offers
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Apps -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="offer-card">
+                        <span class="limited-badge">New</span>
+                        <div class="offer-icon offer-icon-amber">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile Apps</h4>
+                        <p>Download trending apps and unlock exclusive rewards instantly.</p>
+                        <a href="#lead" class="btn btn-grad btn-sm-grad w-100" style="background: linear-gradient(135deg, #F59E0B, #EF4444);">
+                            <i class="fas fa-arrow-right"></i> Install Apps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <!-- <section class="section-padding why-section" id="why" aria-label="Why Choose Us">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <div class="section-label"><span class="line"></span> Why Us <span class="line"></span></div>
+                <h2 class="section-title">Why Choose <span class="gradient-text">PremiumRewards</span></h2>
+                <p class="section-subtitle">We deliver the best experience with industry-leading features and unmatched reliability.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                        <h5>Fast Approval</h5>
+                        <p>Get your rewards approved within minutes, not days.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="80">
+                    <div class="why-card">
+                        <div class="why-icon" style="background: var(--grad-blue-cyan);"><i class="fas fa-shield-halved"></i></div>
+                        <h5>Trusted Offers</h5>
+                        <p>All offers are verified and from reputable partners.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="160">
+                    <div class="why-card">
+                        <div class="why-icon" style="background: var(--grad-violet-pink);"><i class="fas fa-lock"></i></div>
+                        <h5>Secure Platform</h5>
+                        <p>Bank-level encryption protects your data 24/7.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="240">
+                    <div class="why-card">
+                        <div class="why-icon" style="background: linear-gradient(135deg, #22C55E, #06B6D4);"><i class="fas fa-rotate"></i></div>
+                        <h5>Daily Updates</h5>
+                        <p>Fresh offers added every single day.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="320">
+                    <div class="why-card">
+                        <div class="why-icon" style="background: linear-gradient(135deg, #F59E0B, #EF4444);"><i class="fas fa-chart-pie"></i></div>
+                        <h5>High Conversions</h5>
+                        <p>Optimized funnels that maximize your earnings.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="why-card">
+                        <div class="why-icon" style="background: linear-gradient(135deg, #EC4899, #F59E0B);"><i class="fas fa-mobile-screen"></i></div>
+                        <h5>Mobile Friendly</h5>
+                        <p>Perfect experience on any device, anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- ===== STATISTICS ===== -->
+    <section class="section-padding stats-section" id="stats" aria-label="Statistics">
+        <div class="container position-relative">
+            <div class="row g-4">
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="500" data-suffix="K+">0</span></div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="10" data-suffix="M+">0</span></div>
+                        <div class="stat-label">Earnings</div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="50" data-suffix="+">0</span></div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="1000" data-suffix="+">0</span></div>
+                        <div class="stat-label">Active Offers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section-padding" id="how" aria-label="How It Works">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <div class="section-label"><span class="line"></span> Simple Process <span class="line"></span></div>
+                <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+                <p class="section-subtitle">Three simple steps to start earning rewards today.</p>
+            </div>
+
+            <div class="row g-4 position-relative">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="step-card">
+                        <div class="step-connector d-none d-lg-block" aria-hidden="true"></div>
+                        <div class="step-number">1</div>
+                        <div class="step-icon"><i class="fas fa-hand-pointer"></i></div>
+                        <h4>Choose an Offer</h4>
+                        <p>Browse our curated categories and select the offer that matches your interests.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="step-card">
+                        <div class="step-connector d-none d-lg-block" aria-hidden="true"></div>
+                        <div class="step-number">2</div>
+                        <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <h4>Complete Requirements</h4>
+                        <p>Follow the simple steps — fill a form, download an app, or take a survey.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-icon"><i class="fas fa-wallet"></i></div>
+                        <h4>Get Rewarded</h4>
+                        <p>Receive your earnings via gift cards, PayPal, or direct bank transfer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED OFFERS CAROUSEL ===== -->
+    <section class="section-padding featured-section" id="featured" aria-label="Featured Offers">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <div class="section-label"><span class="line"></span> Trending Now <span class="line"></span></div>
+                <h2 class="section-title">Featured <span class="gradient-text">Offers</span></h2>
+                <p class="section-subtitle">Top-performing offers with the highest payouts this week.</p>
+            </div>
+
+            <div class="carousel-track" id="carouselTrack" data-aos="fade-up" data-aos-delay="100">
+                <div class="featured-card">
+                    <img src="/assets/images_1.jpeg" alt="Gift Card Rewards" class="featured-img" loading="lazy">
+                    <div class="featured-body">
+                        <div class="featured-meta">
+                            <span class="featured-payout">$25.00</span>
+                            <span class="featured-type">Reward</span>
+                        </div>
+                        <h5>$500 Gift Card Sweepstakes</h5>
+                        <p>Enter for a chance to win a $500 gift card from top retailers. No purchase necessary.</p>
+                        <a href="#lead" class="btn btn-grad btn-sm-grad w-100">Claim Now</a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <img src="/assets/image_2.webp" alt="Survey Panel" class="featured-img" loading="lazy">
+                    <div class="featured-body">
+                        <div class="featured-meta">
+                            <span class="featured-payout">$5.00</span>
+                            <span class="featured-type">Survey</span>
+                        </div>
+                        <h5>Premium Survey Panel</h5>
+                        <p>Share your opinion on consumer products and earn instant cash rewards.</p>
+                        <a href="#lead" class="btn btn-grad-blue btn-grad btn-sm-grad w-100">Claim Now</a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <img src="/assets/images_3.webp" alt="App Download" class="featured-img" loading="lazy">
+                    <div class="featured-body">
+                        <div class="featured-meta">
+                            <span class="featured-payout">$15.00</span>
+                            <span class="featured-type">Claim Now</span>
+                        </div>
+                        <h5>Trending App Rewards</h5>
+                        <p>Download and try the hottest new apps. Earn rewards for each completed install.</p>
+                        <a href="#lead" class="btn btn-grad btn-sm-grad w-100" style="background: linear-gradient(135deg, #F59E0B, #EF4444);">Claim Now</a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <img src="/assets/images_4.jpg" alt="Credit Card Offer" class="featured-img" loading="lazy">
+                    <div class="featured-body">
+                        <div class="featured-meta">
+                            <span class="featured-payout">$50.00</span>
+                            <span class="featured-type">Finance</span>
+                        </div>
+                        <h5>Premium Credit Card Match</h5>
+                        <p>Get matched with the best credit card offers based on your credit profile.</p>
+                        <a href="#lead" class="btn btn-grad-pink btn-grad btn-sm-grad w-100">Claim Now</a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <img src="/assets/images_5.webp" alt="Remote Job" class="featured-img" loading="lazy">
+                    <div class="featured-body">
+                        <div class="featured-meta">
+                            <span class="featured-payout">$35.00</span>
+                            <span class="featured-type">Finance</span>
+                        </div>
+                        <h5>Remote Work Opportunities</h5>
+                        <p>Find high-paying remote positions from Fortune 500 companies hiring now.</p>
+                        <a href="#lead" class="btn btn-grad btn-sm-grad w-100" style="background: linear-gradient(135deg, #22C55E, #06B6D4);">Apply Now</a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <img src="/assets/images_6.jpg" alt="Insurance Offer" class="featured-img" loading="lazy">
+                    <div class="featured-body">
+                        <div class="featured-meta">
+                            <span class="featured-payout">$40.00</span>
+                            <span class="featured-type">Finance</span>
+                        </div>
+                        <h5>Free Insurance Quote</h5>
+                        <p>Compare insurance rates from top providers and find the best deal in minutes.</p>
+                        <a href="#lead" class="btn btn-grad btn-sm-grad w-100">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-controls-custom" data-aos="fade-up" data-aos-delay="200">
+                <button class="carousel-btn-custom" id="carouselPrev" aria-label="Previous offers"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn-custom" id="carouselNext" aria-label="Next offers"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section-padding" id="testimonials" aria-label="Testimonials" style="background: linear-gradient(180deg, var(--bg-secondary), var(--bg-primary));">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <div class="section-label"><span class="line"></span> Testimonials <span class="line"></span></div>
+                <h2 class="section-title">Loved by <span class="gradient-text">Thousands</span></h2>
+                <p class="section-subtitle">Real stories from real users earning rewards every day.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"I earned $200 in my first week just by completing surveys and app installs. The rewards process is incredibly fast!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://picsum.photos/seed/user1/100/100.jpg" alt="Sarah M." class="testimonial-avatar" loading="lazy">
+                            <div>
+                                <div class="testimonial-name">Sarah M.</div>
+                                <div class="testimonial-role">Verified User • New York</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Best rewards platform I've used. The sweepstakes are legit — I actually won a $100 Amazon gift card last month!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://picsum.photos/seed/user2/100/100.jpg" alt="James R." class="testimonial-avatar" loading="lazy">
+                            <div>
+                                <div class="testimonial-name">James R.</div>
+                                <div class="testimonial-role">Verified User • California</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                        </div>
+                        <p class="testimonial-text">"Found my current remote job through their careers section. The finance offers also helped me get a better credit card rate."</p>
+                        <div class="testimonial-author">
+                            <img src="https://picsum.photos/seed/user3/100/100.jpg" alt="Emily K." class="testimonial-avatar" loading="lazy">
+                            <div>
+                                <div class="testimonial-name">Emily K.</div>
+                                <div class="testimonial-role">Verified User • Texas</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The mobile app rewards are so easy. Just download, try for a few minutes, and get paid. Love this platform!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://picsum.photos/seed/user4/100/100.jpg" alt="David L." class="testimonial-avatar" loading="lazy">
+                            <div>
+                                <div class="testimonial-name">David L.</div>
+                                <div class="testimonial-role">Verified User • Florida</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"I was skeptical at first but this is the real deal. $350 earned in two weeks with minimal effort. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://picsum.photos/seed/user5/100/100.jpg" alt="Maria G." class="testimonial-avatar" loading="lazy">
+                            <div>
+                                <div class="testimonial-name">Maria G.</div>
+                                <div class="testimonial-role">Verified User • Illinois</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The daily updates keep things fresh. There's always something new to try. Customer support is also excellent."</p>
+                        <div class="testimonial-author">
+                            <img src="https://picsum.photos/seed/user6/100/100.jpg" alt="Alex T." class="testimonial-avatar" loading="lazy">
+                            <div>
+                                <div class="testimonial-name">Alex T.</div>
+                                <div class="testimonial-role">Verified User • Ohio</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LEAD CAPTURE ===== -->
+    <section class="section-padding lead-section" id="lead" aria-label="Sign Up">
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="text-center" data-aos="fade-up">
+                <div class="section-label"><span class="line"></span> Get Access <span class="line"></span></div>
+                <h2 class="section-title">Unlock <span class="gradient-text">Exclusive Offers</span></h2>
+                <p class="section-subtitle">Sign up now and get instant access to premium rewards, limited-time sweepstakes, and high-paying offers.</p>
+            </div>
+
+            <div class="lead-card" data-aos="fade-up" data-aos-delay="100">
+                <form id="leadForm" novalidate>
+                    <a href="#" class="btn btn-grad w-100" style="padding: 16px; font-size: 1rem; margin-top: 0.5rem;">
+                        <i class="fas fa-lock"></i> Unlock Exclusive Offers
+                    </a>
+                    <p class="form-privacy">
+                        <i class="fas fa-shield-halved"></i> Your information is 100% secure. By signing up, you agree to our
+                        <a href="#">Privacy Policy</a> and <a href="#">Terms & Conditions</a>.
+                    </p>
+                </form>
+
+                <div class="form-success" id="formSuccess">
+                    <div class="success-icon"><i class="fas fa-check"></i></div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0.75rem;">You're In!</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Check your email for your exclusive access link and start earning rewards today.</p>
+                    <a href="#offers" class="btn btn-grad btn-sm-grad" style="margin-top: 1rem;">Browse Offers Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRUST & SECURITY ===== -->
+    <section class="section-padding trust-section" id="trust" aria-label="Trust and Security">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <div class="section-label"><span class="line"></span> Trust & Security <span class="line"></span></div>
+                <h2 class="section-title">Your Safety is <span class="gradient-text">Our Priority</span></h2>
+            </div>
+
+            <div class="row g-4 mt-2 justify-content-center">
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="0">
+                    <div class="trust-badge">
+                        <div class="trust-icon trust-icon-ssl">
+                            <i class="fas fa-lock"></i>
+                            <span class="check-badge"><i class="fas fa-check"></i></span>
+                        </div>
+                        <h6>SSL Secure</h6>
+                        <p>256-bit encryption</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="trust-badge">
+                        <div class="trust-icon trust-icon-verified">
+                            <i class="fas fa-circle-check"></i>
+                            <span class="check-badge"><i class="fas fa-check"></i></span>
+                        </div>
+                        <h6>Verified Partners</h6>
+                        <p>100% vetted offers</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="trust-badge">
+                        <div class="trust-icon trust-icon-privacy">
+                            <i class="fas fa-user-shield"></i>
+                            <span class="check-badge"><i class="fas fa-check"></i></span>
+                        </div>
+                        <h6>Privacy Protected</h6>
+                        <p>GDPR compliant</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="trust-badge">
+                        <div class="trust-icon trust-icon-trusted">
+                            <i class="fas fa-globe"></i>
+                            <span class="check-badge"><i class="fas fa-check"></i></span>
+                        </div>
+                        <h6>Trusted Worldwide</h6>
+                        <p>50+ countries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="contact" role="contentinfo">
+        <div class="container">
+
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>&copy; 2025 PremiumRewards. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p>
+                            <a href="#">Privacy Policy</a> &middot;
+                            <a href="#">Terms & Conditions</a> &middot;
+                            <a href="#">Cookie Policy</a> &middot;
+                            <a href="#">DMCA</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== STICKY MOBILE CTA ===== -->
+    <div class="sticky-mobile-cta" id="stickyMobileCta">
+        <a href="#lead" class="btn btn-grad">
+            <i class="fas fa-bolt"></i> Claim Your Rewards Now
+        </a>
+    </div>
+
+    <!-- ===== RECENT ACTIVITY NOTIFICATION ===== -->
+    <div class="activity-notification" id="activityNotification" aria-live="polite">
+        <img src="https://picsum.photos/seed/act1/80/80.jpg" alt="" class="activity-avatar" id="activityAvatar">
+        <div>
+            <div class="activity-text" id="activityText"></div>
+            <div class="activity-time" id="activityTime"></div>
+        </div>
+    </div>
+
+    <!-- ===== EXIT INTENT POPUP ===== -->
+    <div class="exit-popup-overlay" id="exitPopup" role="dialog" aria-modal="true" aria-label="Special offer popup">
+        <div class="exit-popup">
+            <button class="exit-popup-close" id="exitPopupClose" aria-label="Close popup"><i class="fas fa-xmark"></i></button>
+            <div class="exit-popup-icon"><i class="fas fa-gift"></i></div>
+            <h3>Wait! Don't Miss Out</h3>
+            <p>Get exclusive access to premium offers worth $500+ when you sign up now. This invitation expires soon.</p>
+            <input type="email" class="form-input-custom" id="exitEmail" placeholder="Enter your email for instant access" aria-label="Email for popup offer">
+            <button class="btn btn-grad-pink btn-grad w-100" id="exitSubmit" style="margin-top: 0.5rem;">
+                <i class="fas fa-bolt"></i> Unlock $500+ in Offers
+            </button>
+            <p class="form-privacy" style="margin-top: 0.75rem;">No spam. Unsubscribe anytime.</p>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80
+        });
+
+        // ===== NAVBAR =====
+        const nav = document.getElementById('mainNav');
+        const navToggler = document.getElementById('navToggler');
+        const navbarContent = document.getElementById('navbarContent');
+
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        navToggler.addEventListener('click', () => {
+            const isOpen = navbarContent.classList.contains('show');
+            navbarContent.classList.toggle('show');
+            navToggler.setAttribute('aria-expanded', !isOpen);
+            navToggler.innerHTML = isOpen
+                ? '<i class="bi bi-list"></i>'
+                : '<i class="bi bi-x-lg"></i>';
+        });
+
+        // Close mobile nav on link click
+        document.querySelectorAll('.nav-link-custom').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarContent.classList.remove('show');
+                navToggler.innerHTML = '<i class="bi bi-list"></i>';
+                navToggler.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ===== PARTICLES =====
+        (function initParticles() {
+            const canvas = document.getElementById('particles-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            let w, h;
+
+            function resize() {
+                w = canvas.width = canvas.offsetWidth;
+                h = canvas.height = canvas.offsetHeight;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            class Particle {
+                constructor() {
+                    this.reset();
+                }
+                reset() {
+                    this.x = Math.random() * w;
+                    this.y = Math.random() * h;
+                    this.size = Math.random() * 2 + 0.5;
+                    this.speedX = (Math.random() - 0.5) * 0.4;
+                    this.speedY = (Math.random() - 0.5) * 0.4;
+                    this.opacity = Math.random() * 0.5 + 0.1;
+                    const colors = ['139,92,246', '59,130,246', '6,182,212', '236,72,153'];
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                }
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    if (this.x < 0 || this.x > w || this.y < 0 || this.y > h) this.reset();
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(${this.color},${this.opacity})`;
+                    ctx.fill();
+                }
+            }
+
+            const count = Math.min(80, Math.floor(w * h / 15000));
+            for (let i = 0; i < count; i++) particles.push(new Particle());
+
+            function animate() {
+                ctx.clearRect(0, 0, w, h);
+                particles.forEach(p => { p.update(); p.draw(); });
+
+                // Draw connections
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 120) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = `rgba(139,92,246,${0.06 * (1 - dist / 120)})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.stroke();
+                        }
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+            animate();
+        })();
+
+        // ===== COUNTER ANIMATION =====
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.counter');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.dataset.target);
+                        const suffix = counter.dataset.suffix || '';
+                        const duration = 2000;
+                        const start = performance.now();
+
+                        function updateCounter(now) {
+                            const elapsed = now - start;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            const current = Math.floor(eased * target);
+                            counter.textContent = current.toLocaleString() + suffix;
+                            if (progress < 1) requestAnimationFrame(updateCounter);
+                        }
+                        requestAnimationFrame(updateCounter);
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const statsSection = document.getElementById('stats');
+        if (statsSection) counterObserver.observe(statsSection);
+
+        // ===== CAROUSEL =====
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+        let scrollAmount = 0;
+        let autoScrollInterval;
+
+        function getCardWidth() {
+            const card = track.querySelector('.featured-card');
+            return card ? card.offsetWidth + 24 : 400;
+        }
+
+        function scrollCarousel(direction) {
+            const amount = getCardWidth();
+            scrollAmount += direction * amount;
+            const maxScroll = track.scrollWidth - track.offsetWidth;
+            scrollAmount = Math.max(0, Math.min(scrollAmount, maxScroll));
+            track.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+        }
+
+        prevBtn.addEventListener('click', () => scrollCarousel(-1));
+        nextBtn.addEventListener('click', () => scrollCarousel(1));
+
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(() => {
+                const maxScroll = track.scrollWidth - track.offsetWidth;
+                if (scrollAmount >= maxScroll) {
+                    scrollAmount = 0;
+                    track.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    scrollCarousel(1);
+                }
+            }, 4000);
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+        }
+
+        startAutoScroll();
+        track.addEventListener('mouseenter', stopAutoScroll);
+        track.addEventListener('mouseleave', startAutoScroll);
+        prevBtn.addEventListener('click', () => { stopAutoScroll(); startAutoScroll(); });
+        nextBtn.addEventListener('click', () => { stopAutoScroll(); startAutoScroll(); });
+
+        // ===== LEAD FORM =====
+        const leadForm = document.getElementById('leadForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        leadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            const name = document.getElementById('leadName');
+            const email = document.getElementById('leadEmail');
+            const country = document.getElementById('leadCountry');
+
+            // Reset errors
+            [name, email, country].forEach(f => f.classList.remove('error'));
+            document.querySelectorAll('.form-error').forEach(e => e.classList.remove('visible'));
+
+            if (!name.value.trim()) {
+                name.classList.add('error');
+                document.getElementById('nameError').classList.add('visible');
+                isValid = false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                email.classList.add('error');
+                document.getElementById('emailError').classList.add('visible');
+                isValid = false;
+            }
+
+            if (!country.value) {
+                country.classList.add('error');
+                document.getElementById('countryError').classList.add('visible');
+                isValid = false;
+            }
+
+            if (isValid) {
+                leadForm.style.display = 'none';
+                formSuccess.classList.add('visible');
+            }
+        });
+
+        // Clear error on input
+        ['leadName', 'leadEmail', 'leadCountry'].forEach(id => {
+            document.getElementById(id).addEventListener('input', function() {
+                this.classList.remove('error');
+                const errorEl = this.nextElementSibling;
+                if (errorEl) errorEl.classList.remove('visible');
+            });
+        });
+
+        // ===== RECENT ACTIVITY NOTIFICATIONS =====
+        const activities = [
+            { name: 'Sarah from NY', action: 'earned $50 in rewards', time: '2 min ago', seed: 'act1' },
+            { name: 'Mike from CA', action: 'claimed a $100 gift card', time: '5 min ago', seed: 'act2' },
+            { name: 'Jessica from TX', action: 'won today\'s sweepstakes', time: '8 min ago', seed: 'act3' },
+            { name: 'David from FL', action: 'completed 3 surveys ($15)', time: '12 min ago', seed: 'act4' },
+            { name: 'Emma from IL', action: 'installed 5 apps ($75)', time: '15 min ago', seed: 'act5' },
+            { name: 'Chris from OH', action: 'earned $30 cashback', time: '18 min ago', seed: 'act6' },
+            { name: 'Ashley from PA', action: 'got matched with a credit card ($50)', time: '22 min ago', seed: 'act7' },
+            { name: 'Tom from WA', action: 'completed a survey ($8)', time: '25 min ago', seed: 'act8' }
+        ];
+
+        const notif = document.getElementById('activityNotification');
+        const notifAvatar = document.getElementById('activityAvatar');
+        const notifText = document.getElementById('activityText');
+        const notifTime = document.getElementById('activityTime');
+        let activityIndex = 0;
+        let notifTimeout;
+
+        function showActivity() {
+            const a = activities[activityIndex % activities.length];
+            notifAvatar.src = `https://picsum.photos/seed/${a.seed}/80/80.jpg`;
+            notifText.innerHTML = `<strong>${a.name}</strong> ${a.action}`;
+            notifTime.textContent = a.time;
+            notif.classList.add('show');
+            activityIndex++;
+
+            notifTimeout = setTimeout(() => {
+                notif.classList.remove('show');
+                setTimeout(showActivity, 8000 + Math.random() * 7000);
+            }, 5000);
+        }
+
+        // Start showing notifications after 5 seconds
+        setTimeout(showActivity, 5000);
+
+        // ===== EXIT INTENT POPUP =====
+        const exitPopup = document.getElementById('exitPopup');
+        const exitClose = document.getElementById('exitPopupClose');
+        const exitSubmit = document.getElementById('exitSubmit');
+        let exitShown = false;
+
+        document.addEventListener('mouseout', (e) => {
+            if (e.clientY < 5 && !exitShown && window.scrollY > 300) {
+                exitPopup.classList.add('visible');
+                exitShown = true;
+            }
+        });
+
+        exitClose.addEventListener('click', () => exitPopup.classList.remove('visible'));
+        exitPopup.addEventListener('click', (e) => {
+            if (e.target === exitPopup) exitPopup.classList.remove('visible');
+        });
+
+        exitSubmit.addEventListener('click', () => {
+            const exitEmail = document.getElementById('exitEmail');
+            if (exitEmail.value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(exitEmail.value)) {
+                exitPopup.querySelector('.exit-popup-icon').innerHTML = '<i class="fas fa-check"></i>';
+                exitPopup.querySelector('h3').textContent = 'You\'re In!';
+                exitPopup.querySelector('p').textContent = 'Check your email for your exclusive access link.';
+                exitSubmit.textContent = 'Redirecting...';
+                exitSubmit.disabled = true;
+                setTimeout(() => exitPopup.classList.remove('visible'), 2500);
+            } else {
+                exitEmail.style.borderColor = 'rgba(239, 68, 68, 0.5)';
+                exitEmail.focus();
+            }
+        });
+
+        // ===== SMOOTH SCROLL FOR ALL ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ===== KEYBOARD ACCESSIBILITY =====
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                exitPopup.classList.remove('visible');
+                navbarContent.classList.remove('show');
+                navToggler.innerHTML = '<i class="bi bi-list"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
