@@ -2493,5 +2493,25 @@
             }
         });
     </script>
+
+    <!-- Trackdesk tracker begin -->
+    <script async src="//cdn.trackdesk.com/tracking.js"></script>
+    <script>
+    (function(t,d,k){(t[k]=t[k]||[]).push(d);t[d]=t[d]||t[k].f||function(){(t[d].q=t[d].q||[]).push(arguments)}})(window,"trackdesk","TrackdeskObject");
+
+    trackdesk("optima-solution", "conversion", {
+        "conversionType": "registration",
+        "customerId": {queryParam: "cid"},
+        "customParams": {
+        "advS1": {queryParam: "advs1"}
+        },
+        "status": "CONVERSION_STATUS_APPROVED",
+        "currencyCode": "USD",
+        "amount": {
+        "value": {cookieParam: "test_click_cookie"}
+        }
+    }, (data) => { console.log(data.cid); });
+    </script>
+    <!-- Trackdesk tracker end -->
 </body>
 </html>
