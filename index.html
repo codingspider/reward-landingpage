@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Unlock premium rewards, sweepstakes, surveys, jobs, finance offers, and mobile app rewards. Start earning today with trusted exclusive opportunities.">
-    <meta name="keywords" content="CPA offers, rewards, sweepstakes, surveys, jobs, finance, mobile apps, affiliate">
-    <title>PremiumRewards — Unlock Exclusive Offers & Rewards</title>
+    <meta name="description" content="Exclusive rewards landing page with premium offers, gift cards, and cash bonuses. Sign up to unlock your earnings!">
+    <meta name="keywords" content="rewards, gift cards, cashback, bonus, exclusive offers">
+    <title>RewardVault — Earn Premium Rewards Daily</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-primary: #0F172A;
@@ -1020,6 +1020,53 @@
             filter: blur(60px);
         }
 
+        .view-profile-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .view-profile-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--grad-purple-blue);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .view-profile-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+            border-color: transparent;
+        }
+
+        .view-profile-btn:hover::before {
+            opacity: 1;
+        }
+
+        .view-profile-btn:hover i {
+            transform: translateX(5px);
+            color: #fff;
+        }
+
+        .view-profile-btn i {
+            transition: all 0.3s ease;
+        }
+
         .form-floating-custom {
             position: relative;
             margin-bottom: 1.25rem;
@@ -1308,7 +1355,7 @@
             font-size: 1rem;
         }
 
-        /* ===== RECENT ACTIVITY ===== */
+        /* ===== RECENT ACTIVITY NOTIFICATION ===== */
         .activity-notification {
             position: fixed;
             bottom: 100px;
@@ -1493,18 +1540,18 @@
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNav" role="navigation" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand-custom" href="https://appsave.store/sl/3159w">Premium<span>Rewards</span></a>
+            <a class="navbar-brand-custom" href="#">Reward<span>Vault</span></a>
             <button class="navbar-toggler-custom d-lg-none" type="button" id="navToggler" aria-label="Toggle navigation" aria-expanded="false">
                 <i class="bi bi-list"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
                     <li class="nav-item"><a class="nav-link nav-link-custom active" href="#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#offers">Offers</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link nav-link-custom" href="#why">Rewards</a></li> -->
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#offers">Rewards</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#how">How It Works</a></li>
                     <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact">Contact</a></li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a class="btn btn-grad btn-sm-grad" data-cpa="cpa-grip" href="https://singingfiles.com/show.php?l=0&u=160869&id=74818">Get Started</a>
+                        <a class="btn btn-grad btn-sm-grad" href="https://appsave.store/sl/d28r8">Get Started</a>
                     </li>
                 </ul>
             </div>
@@ -1524,29 +1571,29 @@
                 <div class="col-lg-6">
                     <div class="hero-badge">
                         <span class="pulse-dot"></span>
-                        Limited Time — 2x Rewards Active
+                        Limited Time — 2x Premium Rewards
                     </div>
                     <h1 class="hero-title">
-                        Unlock <span class="gradient-text">Premium Rewards</span> & Exclusive Opportunities
+                        Your Ultimate <span class="gradient-text">Rewards</span> Dashboard
                     </h1>
                     <p class="hero-subtitle">
-                        Complete simple offers, surveys, app installs, and career opportunities to start earning today.
+                        Complete premium offers, earn exclusive gift cards, and unlock cash bonuses from the biggest reward marketplace.
                     </p>
                     <div class="hero-buttons">
-                        <a href="https://saveapp.store/sl/d28r8" class="btn btn-grad">
-                            <i class="fas fa-bolt"></i> Get Started Now
+                        <a href="https://appsave.store/sl/d28r8" class="btn btn-grad">
+                            <i class="fas fa-star"></i> Start Earning
                         </a>
-                        <a href="#offers" class="btn btn-outline-grad">
-                            <i class="fas fa-grid-2"></i> Explore Offers
+                        <a href="#how" class="btn btn-outline-grad">
+                            <i class="fas fa-play"></i> How It Works
                         </a>
                     </div>
                     <div class="hero-stats-inline">
                         <div class="hero-stat-item">
-                            <h3>500K+</h3>
+                            <h3>1M+</h3>
                             <p>Active Users</p>
                         </div>
                         <div class="hero-stat-item">
-                            <h3>$2.5M+</h3>
+                            <h3>$5M+</h3>
                             <p>Rewards Paid</p>
                         </div>
                         <div class="hero-stat-item">
@@ -1572,11 +1619,11 @@
                             <div class="hero-card-reward">
                                 <div>
                                     <div class="reward-amount">$127.50</div>
-                                    <div class="reward-label">Available Rewards</div>
-                                    <div class="reward-sub">Complete offers to unlock</div>
+                                    <div class="reward-label">Total Payouts</div>
+                                    <div class="reward-sub">Available right now</div>
                                 </div>
                                 <div class="ms-auto text-end">
-                                    <div style="font-size: 0.75rem; color: #4ADE80; font-weight: 600;">+12.5%</div>
+                                    <div style="font-size: 0.75rem; color: #4ADE80; font-weight: 600;">+15%</div>
                                     <div style="font-size: 0.65rem; color: var(--text-muted);">This week</div>
                                 </div>
                             </div>
@@ -1590,114 +1637,115 @@
     <!-- ===== URGENCY BANNER ===== -->
     <div class="urgency-banner" role="marquee" aria-label="Urgency notifications">
         <div class="urgency-scroll">
-            <span class="urgency-item"><i class="fas fa-fire"></i> Sarah from NY just earned $50 — 2 min ago</span>
-            <span class="urgency-item"><i class="fas fa-bolt"></i> Flash Offer: 3x Cashback ends in 4 hours</span>
-            <span class="urgency-item"><i class="fas fa-fire"></i> Mike from CA claimed a $100 gift card — 5 min ago</span>
-            <span class="urgency-item"><i class="fas fa-bolt"></i> New: 50 premium survey slots added</span>
-            <span class="urgency-item"><i class="fas fa-fire"></i> Jessica from TX won today's sweepstakes — 8 min ago</span>
-            <span class="urgency-item"><i class="fas fa-bolt"></i> Limited: Double rewards on all app installs</span>
-            <span class="urgency-item"><i class="fas fa-fire"></i> Sarah from NY just earned $50 — 2 min ago</span>
-            <span class="urgency-item"><i class="fas fa-bolt"></i> Flash Offer: 3x Cashback ends in 4 hours</span>
-            <span class="urgency-item"><i class="fas fa-fire"></i> Mike from CA claimed a $100 gift card — 5 min ago</span>
-            <span class="urgency-item"><i class="fas fa-bolt"></i> New: 50 premium survey slots added</span>
-            <span class="urgency-item"><i class="fas fa-fire"></i> Jessica from TX won today's sweepstakes — 8 min ago</span>
-            <span class="urgency-item"><i class="fas fa-bolt"></i> Limited: Double rewards on all app installs</span>
+            <span class="urgency-item"><i class="fas fa-fire"></i> Sarah from NY just earned $75 — 2 min ago</span>
+            <span class="urgency-item"><i class="fas fa-bolt"></i> Flash Offer: 5x Rewards on app downloads</span>
+            <span class="urgency-item"><i class="fas fa-fire"></i> Mike from CA claimed a $200 gift card — 5 min ago</span>
+            <span class="urgency-item"><i class="fas fa-bolt"></i> New: Premium wallet rewards added</span>
+            <span class="urgency-item"><i class="fas fa-fire"></i> Jessica from TX won a $150 sweepstakes — 8 min ago</span>
+            <span class="urgency-item"><i class="fas fa-bolt"></i> Limited: Double rewards on surveys</span>
+            <span class="urgency-item"><i class="fas fa-fire"></i> Sarah from NY just earned $75 — 2 min ago</span>
+            <span class="urgency-item"><i class="fas fa-bolt"></i> Flash Offer: 5x Rewards on app downloads</span>
+            <span class="urgency-item"><i class="fas fa-fire"></i> Mike from CA claimed a $200 gift card — 5 min ago</span>
+            <span class="urgency-item"><i class="fas fa-bolt"></i> New: Premium wallet rewards added</span>
+            <span class="urgency-item"><i class="fas fa-fire"></i> Jessica from TX won a $150 sweepstakes — 8 min ago</span>
+            <span class="urgency-item"><i class="fas fa-bolt"></i> Limited: Double rewards on surveys</span>
         </div>
     </div>
 
     <!-- ===== OFFERS SECTION ===== -->
-    <section class="section-padding" id="offers" aria-label="Offer Categories">
+    <section class="section-padding" id="offers" aria-label="Reward Categories">
         <div class="container">
             <div class="text-center" data-aos="fade-up">
-                <div class="section-label"><span class="line"></span> Our Categories <span class="line"></span></div>
-                <h2 class="section-title">Browse Premium <span class="gradient-text">Offer Categories</span></h2>
-                <p class="section-subtitle">Choose from a wide range of high-converting offers tailored to your interests and earning goals.</p>
+                <div class="section-label"><span class="line"></span> Premium Offers <span class="line"></span></div>
+                <h2 class="section-title">Select Your <span class="gradient-text">Reward Type</span></h2>
+                <p class="section-subtitle">Choose from a wide range of exclusive rewards tailored for maximum earning potential.</p>
             </div>
 
             <div class="row g-4">
-                <!-- Rewards -->
+                <!-- Gift Cards -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                     <div class="offer-card">
-                        <span class="limited-badge">Hot</span>
+                        <span class="limited-badge">Popular</span>
                         <div class="offer-icon offer-icon-purple">
                             <i class="fas fa-gift"></i>
                         </div>
-                        <h4>Rewards</h4>
-                        <p>Earn gift cards, cashback rewards, and exclusive bonuses from trusted partners.</p>
-                        <a href="https://saveapp.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100">
-                            <i class="fas fa-arrow-right"></i> Claim Rewards
+                        <h4>Gift Cards</h4>
+                        <p>Earn hundreds of dollars in gift cards from Amazon, Walmart, Target, and all your favorite retailers.</p>
+                        <a href="https://appsave.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100">
+                            <i class="fas fa-arrow-right"></i> View Gift Cards
                         </a>
                     </div>
                 </div>
 
-                <!-- Sweepstakes -->
+                <!-- Cash Bonuses -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="offer-card">
                         <div class="offer-icon offer-icon-blue">
-                            <i class="fas fa-trophy"></i>
+                            <i class="fas fa-wallet"></i>
                         </div>
-                        <h4>Sweepstakes</h4>
-                        <p>Enter exciting giveaways and get chances to win amazing prizes every day.</p>
-                        <a href="https://appsave.space/sl/3159w" class="btn btn-grad-blue btn-grad btn-sm-grad w-100">
-                            <i class="fas fa-arrow-right"></i> Join Sweepstakes
+                        <h4>Cash Bonuses</h4>
+                        <p>Direct cash deposits to your PayPal or bank account. Instant payouts available 24/7.</p>
+                        <a href="https://appsave.store/sl/d28r8" class="btn btn-grad-blue btn-grad btn-sm-grad w-100">
+                            <i class="fas fa-arrow-right"></i> View Cash Bonuses
                         </a>
                     </div>
                 </div>
 
-                <!-- Surveys -->
+                <!-- Premium Offers -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="offer-card">
-                        <span class="limited-badge">Trending</span>
+                        <span class="limited-badge">New</span>
                         <div class="offer-icon offer-icon-cyan">
-                            <i class="fas fa-clipboard-list"></i>
+                            <i class="fas fa-crown"></i>
                         </div>
-                        <h4>Surveys</h4>
-                        <p>Share your opinion and earn rewards by completing quick surveys.</p>
-                        <a href="https://saveapp.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100" style="background: var(--grad-blue-cyan);">
-                            <i class="fas fa-arrow-right"></i> Start Surveys
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Jobs & Careers -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="offer-card">
-                        <div class="offer-icon offer-icon-pink">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <h4>Jobs & Careers</h4>
-                        <p>Discover flexible remote jobs and career opportunities from top companies.</p>
-                        <a href="https://saveapp.store/sl/d28r8" class="btn btn-grad-pink btn-grad btn-sm-grad w-100">
-                            <i class="fas fa-arrow-right"></i> Browse Jobs
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Finance -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="offer-card">
-                        <div class="offer-icon offer-icon-green">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h4>Finance</h4>
-                        <p>Explore credit, loans, insurance, and financial opportunities available today.</p>
-                        <a href="https://saveapp.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100" style="background: linear-gradient(135deg, #22C55E, #06B6D4);">
-                            <i class="fas fa-arrow-right"></i> View Finance Offers
+                        <h4>Premium Offers</h4>
+                        <p>Exclusive high-value offers with enhanced rewards for premium members only.</p>
+                        <a href="https://appsave.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100" style="background: var(--grad-blue-cyan);">
+                            <i class="fas fa-arrow-right"></i> View Premium
                         </a>
                     </div>
                 </div>
 
                 <!-- Mobile Apps -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="offer-card">
-                        <span class="limited-badge">New</span>
-                        <div class="offer-icon offer-icon-amber">
+                        <div class="offer-icon offer-icon-pink">
                             <i class="fas fa-mobile-alt"></i>
                         </div>
                         <h4>Mobile Apps</h4>
-                        <p>Download trending apps and unlock exclusive rewards instantly.</p>
-                        <a href="https://saveapp.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100" style="background: linear-gradient(135deg, #F59E0B, #EF4444);">
-                            <i class="fas fa-arrow-right"></i> Install Apps
+                        <p>Download premium apps and earn extra rewards. Each successful install = extra cash.</p>
+                        <a href="https://appsave.store/sl/d28r8" class="btn btn-grad-pink btn-grad btn-sm-grad w-100">
+                            <i class="fas fa-arrow-right"></i> Browse Apps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Surveys -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="offer-card">
+                        <span class="limited-badge">Trending</span>
+                        <div class="offer-icon offer-icon-green">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h4>Market Research</h4>
+                        <p>Complete paid surveys and focus groups. Share your opinions and earn significant rewards.</p>
+                        <a href="https://appsave.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100" style="background: linear-gradient(135deg, #22C55E, #06B6D4);">
+                            <i class="fas fa-arrow-right"></i> Start Surveys
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sweepstakes -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="offer-card">
+                        <span class="limited-badge">Jackpot</span>
+                        <div class="offer-icon offer-icon-amber">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>Weekly Sweepstakes</h4>
+                        <p>Enter our massive weekly giveaways. Win cars, vacations, and millions in cash.</p>
+                        <a href="https://appsave.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100" style="background: linear-gradient(135deg, #F59E0B, #EF4444);">
+                            <i class="fas fa-arrow-right"></i> Enter Now
                         </a>
                     </div>
                 </div>
@@ -1706,60 +1754,60 @@
     </section>
 
     <!-- ===== WHY CHOOSE US ===== -->
-    <!-- <section class="section-padding why-section" id="why" aria-label="Why Choose Us">
+    <section class="section-padding why-section" id="why" aria-label="Why Choose Us">
         <div class="container">
             <div class="text-center" data-aos="fade-up">
-                <div class="section-label"><span class="line"></span> Why Us <span class="line"></span></div>
-                <h2 class="section-title">Why Choose <span class="gradient-text">PremiumRewards</span></h2>
-                <p class="section-subtitle">We deliver the best experience with industry-leading features and unmatched reliability.</p>
+                <div class="section-label"><span class="line"></span> Premium Benefits <span class="line"></span></div>
+                <h2 class="section-title">Why Choose <span class="gradient-text">RewardVault</span></h2>
+                <p class="section-subtitle">Experience the highest payout rates and most secure platform for earning rewards.</p>
             </div>
 
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="0">
                     <div class="why-card">
                         <div class="why-icon"><i class="fas fa-bolt"></i></div>
-                        <h5>Fast Approval</h5>
-                        <p>Get your rewards approved within minutes, not days.</p>
+                        <h5>Instant Payouts</h5>
+                        <p>Get your earnings paid within 24 hours. No waiting periods or delays.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="80">
                     <div class="why-card">
                         <div class="why-icon" style="background: var(--grad-blue-cyan);"><i class="fas fa-shield-halved"></i></div>
-                        <h5>Trusted Offers</h5>
-                        <p>All offers are verified and from reputable partners.</p>
+                        <h5>Secure Platform</h5>
+                        <p>Bank-level security with 256-bit SSL encryption and fraud protection.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="160">
                     <div class="why-card">
                         <div class="why-icon" style="background: var(--grad-violet-pink);"><i class="fas fa-lock"></i></div>
-                        <h5>Secure Platform</h5>
-                        <p>Bank-level encryption protects your data 24/7.</p>
+                        <h5>Privacy Protected</h5>
+                        <p>Your data is always safe. GDPR compliant with strict privacy policies.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="240">
                     <div class="why-card">
                         <div class="why-icon" style="background: linear-gradient(135deg, #22C55E, #06B6D4);"><i class="fas fa-rotate"></i></div>
                         <h5>Daily Updates</h5>
-                        <p>Fresh offers added every single day.</p>
+                        <p>New offers are added every single day to maximize your earning potential.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="320">
                     <div class="why-card">
                         <div class="why-icon" style="background: linear-gradient(135deg, #F59E0B, #EF4444);"><i class="fas fa-chart-pie"></i></div>
-                        <h5>High Conversions</h5>
-                        <p>Optimized funnels that maximize your earnings.</p>
+                        <h5>High Returns</h5>
+                        <p>Our offers consistently deliver 2-3x higher earnings than industry average.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="why-card">
                         <div class="why-icon" style="background: linear-gradient(135deg, #EC4899, #F59E0B);"><i class="fas fa-mobile-screen"></i></div>
-                        <h5>Mobile Friendly</h5>
-                        <p>Perfect experience on any device, anywhere.</p>
+                        <h5>Mobile Optimized</h5>
+                        <p>Perfect experience on any device. Mobile-first design for earning on the go.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- ===== STATISTICS ===== -->
     <section class="section-padding stats-section" id="stats" aria-label="Statistics">
@@ -1767,25 +1815,25 @@
             <div class="row g-4">
                 <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
                     <div class="stat-item">
-                        <div class="stat-number"><span class="counter" data-target="500" data-suffix="K+">0</span></div>
+                        <div class="stat-number"><span class="counter" data-target="1000" data-suffix="K+">0</span></div>
                         <div class="stat-label">Active Users</div>
                     </div>
                 </div>
                 <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="stat-item">
-                        <div class="stat-number"><span class="counter" data-target="10" data-suffix="M+">0</span></div>
-                        <div class="stat-label">Earnings</div>
+                        <div class="stat-number"><span class="counter" data-target="15" data-suffix="M+">0</span></div>
+                        <div class="stat-label">Earnings Paid</div>
                     </div>
                 </div>
                 <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="stat-item">
-                        <div class="stat-number"><span class="counter" data-target="50" data-suffix="+">0</span></div>
+                        <div class="stat-number"><span class="counter" data-target="150" data-suffix="+">0</span></div>
                         <div class="stat-label">Countries</div>
                     </div>
                 </div>
                 <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="stat-item">
-                        <div class="stat-number"><span class="counter" data-target="1000" data-suffix="+">0</span></div>
+                        <div class="stat-number"><span class="counter" data-target="5000" data-suffix="+">0</span></div>
                         <div class="stat-label">Active Offers</div>
                     </div>
                 </div>
@@ -1799,7 +1847,7 @@
             <div class="text-center" data-aos="fade-up">
                 <div class="section-label"><span class="line"></span> Simple Process <span class="line"></span></div>
                 <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
-                <p class="section-subtitle">Three simple steps to start earning rewards today.</p>
+                <p class="section-subtitle">Three simple steps to start earning premium rewards today.</p>
             </div>
 
             <div class="row g-4 position-relative">
@@ -1807,26 +1855,25 @@
                     <div class="step-card">
                         <div class="step-connector d-none d-lg-block" aria-hidden="true"></div>
                         <div class="step-number">1</div>
-                        <div class="step-icon"><i class="fas fa-hand-pointer"></i></div>
-                        <h4>Choose an Offer</h4>
-                        <p>Browse our curated categories and select the offer that matches your interests.</p>
+                        <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+                        <h4>Create Profile</h4>
+                        <p>Sign up and complete your profile to unlock access to all premium rewards and exclusive offers.</p>
                     </div>
                 </div>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
                     <div class="step-card">
                         <div class="step-connector d-none d-lg-block" aria-hidden="true"></div>
                         <div class="step-number">2</div>
-                        <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
-                        <h4>Complete Requirements</h4>
-                        <p>Follow the simple steps — fill a form, download an app, or take a survey.</p>
+                        <div class="step-icon"><i class="fas fa-hand-pointer"></i></div>
+                        <h4>Choose Offers</h4>
+                        <p>Browse through our curated collection of offers. Each offer has detailed instructions for maximum earnings.</p>
                     </div>
                 </div>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="step-card">
-                        <div class="step-number">3</div>
                         <div class="step-icon"><i class="fas fa-wallet"></i></div>
-                        <h4>Get Rewarded</h4>
-                        <p>Receive your earnings via gift cards, PayPal, or direct bank transfer.</p>
+                        <h4>Withdraw Earnings</h4>
+                        <p>Your earnings are instantly available. Withdraw to PayPal, transfer, or receive gift cards directly.</p>
                     </div>
                 </div>
             </div>
@@ -1838,81 +1885,83 @@
         <div class="container">
             <div class="text-center" data-aos="fade-up">
                 <div class="section-label"><span class="line"></span> Trending Now <span class="line"></span></div>
-                <h2 class="section-title">Featured <span class="gradient-text">Offers</span></h2>
-                <p class="section-subtitle">Top-performing offers with the highest payouts this week.</p>
+                <h2 class="section-title">Featured <span class="gradient-text">Rewards</span></h2>
+                <p class="section-subtitle">Highest-value offers with the best conversion rates this week.</p>
             </div>
 
             <div class="carousel-track" id="carouselTrack" data-aos="fade-up" data-aos-delay="100">
                 <div class="featured-card">
-                    <img src="/assets/images_1.jpeg" alt="Gift Card Rewards" class="featured-img" loading="lazy">
+                    <img src="/assets/images_1.jpeg" alt="Premium Gift Card" class="featured-img" loading="lazy">
                     <div class="featured-body">
                         <div class="featured-meta">
-                            <span class="featured-payout">$25.00</span>
-                            <span class="featured-type">Reward</span>
+                            <span class="featured-payout">$250.00</span>
+                            <span class="featured-type">Premium</span>
                         </div>
-                        <h5>$500 Gift Card Sweepstakes</h5>
-                        <p>Enter for a chance to win a $500 gift card from top retailers. No purchase necessary.</p>
-                        <a href="https://saveapp.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100">Claim Now</a>
+                        <h5>$1,000 iPhone 15 Pro</h5>
+                        <p>Enter to win the latest iPhone. No purchase necessary. Just complete the offer once.</p>
+                        <a href="https://appsave.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100">Enter Sweepstakes</a>
                     </div>
                 </div>
                 <div class="featured-card">
                     <img src="/assets/image_2.webp" alt="Survey Panel" class="featured-img" loading="lazy">
                     <div class="featured-body">
                         <div class="featured-meta">
-                            <span class="featured-payout">$5.00</span>
+                            <span class="featured-payout">$75.00</span>
                             <span class="featured-type">Survey</span>
                         </div>
-                        <h5>Premium Survey Panel</h5>
-                        <p>Share your opinion on consumer products and earn instant cash rewards.</p>
-                        <a href="https://saveapp.store/sl/d28r8" class="btn btn-grad-blue btn-grad btn-sm-grad w-100">Claim Now</a>
+                        <h5>Premium Market Research</h5>
+                        <p>Participate in high-paying focus groups and earn up to $75 per session.</p>
+                        <a href="https://appsave.store/sl/d28r8" class="btn btn-grad-blue btn-grad btn-sm-grad w-100">Claim Now</a>
                     </div>
                 </div>
+
                 <div class="featured-card">
                     <img src="/assets/images_3.webp" alt="App Download" class="featured-img" loading="lazy">
                     <div class="featured-body">
                         <div class="featured-meta">
-                            <span class="featured-payout">$15.00</span>
-                            <span class="featured-type">Claim Now</span>
+                            <span class="featured-payout">$50.00</span>
+                            <span class="featured-type">App</span>
                         </div>
-                        <h5>Trending App Rewards</h5>
-                        <p>Download and try the hottest new apps. Earn rewards for each completed install.</p>
-                        <a href="https://saveapp.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100" style="background: linear-gradient(135deg, #F59E0B, #EF4444);">Claim Now</a>
+                        <h5>Premium Finance App</h5>
+                        <p>Try the top-rated crypto investment app. Get $50 for your first $500 transaction .</p>
+                        <a href="https://singingfiles.com/show.php?l=0&u=160869&id=74819"  class="btn btn-grad btn-sm-grad w-100" style="background: linear-gradient(135deg, #F59E0B, #EF4444);">Get Started</a>
                     </div>
                 </div>
+
                 <div class="featured-card">
                     <img src="/assets/images_4.jpg" alt="Credit Card Offer" class="featured-img" loading="lazy">
                     <div class="featured-body">
                         <div class="featured-meta">
-                            <span class="featured-payout">$50.00</span>
+                            <span class="featured-payout">$200.00</span>
                             <span class="featured-type">Finance</span>
                         </div>
-                        <h5>Premium Credit Card Match</h5>
-                        <p>Get matched with the best credit card offers based on your credit profile.</p>
-                        <a href="https://saveapp.store/sl/d28r8" class="btn btn-grad-pink btn-grad btn-sm-grad w-100">Claim Now</a>
+                        <h5>Premium Credit Card</h5>
+                        <p>Get matched with the best credit card offers based on your spending patterns.</p>
+                        <a href="https://appsave.store/sl/d28r8" class="btn btn-grad-pink btn-grad btn-sm-grad w-100">Apply Now</a>
                     </div>
                 </div>
                 <div class="featured-card">
                     <img src="/assets/images_5.webp" alt="Remote Job" class="featured-img" loading="lazy">
                     <div class="featured-body">
                         <div class="featured-meta">
-                            <span class="featured-payout">$35.00</span>
-                            <span class="featured-type">Finance</span>
+                            <span class="featured-payout">$150.00</span>
+                            <span class="featured-type">Career</span>
                         </div>
-                        <h5>Remote Work Opportunities</h5>
-                        <p>Find high-paying remote positions from Fortune 500 companies hiring now.</p>
-                        <a href="https://saveapp.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100" style="background: linear-gradient(135deg, #22C55E, #06B6D4);">Apply Now</a>
+                        <h5>High-Paying Remote Jobs</h5>
+                        <p>Exclusive remote positions from top Fortune 500 companies with $5K+ salaries.</p>
+                        <a href="https://appsave.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100" style="background: linear-gradient(135deg, #22C55E, #06B6D4);">Apply Now</a>
                     </div>
                 </div>
                 <div class="featured-card">
                     <img src="/assets/images_6.jpg" alt="Insurance Offer" class="featured-img" loading="lazy">
                     <div class="featured-body">
                         <div class="featured-meta">
-                            <span class="featured-payout">$40.00</span>
-                            <span class="featured-type">Finance</span>
+                            <span class="featured-payout">$100.00</span>
+                            <span class="featured-type">Insurance</span>
                         </div>
                         <h5>Free Insurance Quote</h5>
-                        <p>Compare insurance rates from top providers and find the best deal in minutes.</p>
-                        <a href="https://saveapp.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100">Get Quote</a>
+                        <p>Get up to $100 in cashback when you compare and purchase insurance through us.</p>
+                        <a href="https://appsave.store/sl/d28r8" class="btn btn-grad btn-sm-grad w-100">Get Quote</a>
                     </div>
                 </div>
             </div>
@@ -1928,9 +1977,9 @@
     <section class="section-padding" id="testimonials" aria-label="Testimonials" style="background: linear-gradient(180deg, var(--bg-secondary), var(--bg-primary));">
         <div class="container">
             <div class="text-center" data-aos="fade-up">
-                <div class="section-label"><span class="line"></span> Testimonials <span class="line"></span></div>
+                <div class="section-label"><span class="line"></span> Verified Success <span class="line"></span></div>
                 <h2 class="section-title">Loved by <span class="gradient-text">Thousands</span></h2>
-                <p class="section-subtitle">Real stories from real users earning rewards every day.</p>
+                <p class="section-subtitle">Real stories from our community of successful earners.</p>
             </div>
 
             <div class="row g-4">
@@ -1940,12 +1989,12 @@
                         <div class="testimonial-stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"I earned $200 in my first week just by completing surveys and app installs. The rewards process is incredibly fast!"</p>
+                        <p class="testimonial-text">"I earned $500 in my first week by completing just 3 offers. The gift cards are real and the payouts are instant!"</p>
                         <div class="testimonial-author">
-                            <img src="" alt="Sarah M." class="testimonial-avatar" loading="lazy">
+                            <img src="https://picsum.photos/seed/test1/80/80.jpg" alt="Michele K." class="testimonial-avatar" loading="lazy">
                             <div>
-                                <div class="testimonial-name">Sarah M.</div>
-                                <div class="testimonial-role">Verified User • New York</div>
+                                <div class="testimonial-name">Michele K.</div>
+                                <div class="testimonial-role">Verified User • Los Angeles</div>
                             </div>
                         </div>
                     </div>
@@ -1956,12 +2005,12 @@
                         <div class="testimonial-stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Best rewards platform I've used. The sweepstakes are legit — I actually won a $100 Amazon gift card last month!"</p>
+                        <p class="testimonial-text">"The premium offers are legitimate. I earned $1,200 last month by focusing on the app and survey sections. Best platform out there!"</p>
                         <div class="testimonial-author">
-                            <img src="" alt="James R." class="testimonial-avatar" loading="lazy">
+                            <img src="https://picsum.photos/seed/test2/80/80.jpg" alt="Jordan L." class="testimonial-avatar" loading="lazy">
                             <div>
-                                <div class="testimonial-name">James R.</div>
-                                <div class="testimonial-role">Verified User • California</div>
+                                <div class="testimonial-name">Jordan L.</div>
+                                <div class="testimonial-role">Verified User • Chicago</div>
                             </div>
                         </div>
                     </div>
@@ -1972,12 +2021,12 @@
                         <div class="testimonial-stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
                         </div>
-                        <p class="testimonial-text">"Found my current remote job through their careers section. The finance offers also helped me get a better credit card rate."</p>
+                        <p class="testimonial-text">"Found my current remote job through their career section. The finance offers also helped me get a better credit card rate."</p>
                         <div class="testimonial-author">
-                            <img src="" alt="Emily K." class="testimonial-avatar" loading="lazy">
+                            <img src="https://picsum.photos/seed/test3/80/80.jpg" alt="Alex P." class="testimonial-avatar" loading="lazy">
                             <div>
-                                <div class="testimonial-name">Emily K.</div>
-                                <div class="testimonial-role">Verified User • Texas</div>
+                                <div class="testimonial-name">Alex P.</div>
+                                <div class="testimonial-role">Verified User • Seattle</div>
                             </div>
                         </div>
                     </div>
@@ -1990,10 +2039,10 @@
                         </div>
                         <p class="testimonial-text">"The mobile app rewards are so easy. Just download, try for a few minutes, and get paid. Love this platform!"</p>
                         <div class="testimonial-author">
-                            <img src="" alt="David L." class="testimonial-avatar" loading="lazy">
+                            <img src="https://picsum.photos/seed/test4/80/80.jpg" alt="Taylor S." class="testimonial-avatar" loading="lazy">
                             <div>
-                                <div class="testimonial-name">David L.</div>
-                                <div class="testimonial-role">Verified User • Florida</div>
+                                <div class="testimonial-name">Taylor S.</div>
+                                <div class="testimonial-role">Verified User • Austin</div>
                             </div>
                         </div>
                     </div>
@@ -2004,12 +2053,12 @@
                         <div class="testimonial-stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"I was skeptical at first but this is the real deal. $350 earned in two weeks with minimal effort. Highly recommend!"</p>
+                        <p class="testimonial-text">"I was skeptical at first but this is the real deal. $1,800 earned in two months with minimal effort. Highly recommend!"</p>
                         <div class="testimonial-author">
-                            <img src="" alt="Maria G." class="testimonial-avatar" loading="lazy">
+                            <img src="https://picsum.photos/seed/test5/80/80.jpg" alt="Jordan R." class="testimonial-avatar" loading="lazy">
                             <div>
-                                <div class="testimonial-name">Maria G.</div>
-                                <div class="testimonial-role">Verified User • Illinois</div>
+                                <div class="testimonial-name">Jordan R.</div>
+                                <div class="testimonial-role">Verified User • Denver</div>
                             </div>
                         </div>
                     </div>
@@ -2022,10 +2071,10 @@
                         </div>
                         <p class="testimonial-text">"The daily updates keep things fresh. There's always something new to try. Customer support is also excellent."</p>
                         <div class="testimonial-author">
-                            <img src="" alt="Alex T." class="testimonial-avatar" loading="lazy">
+                            <img src="https://picsum.photos/seed/test6/80/80.jpg" alt="Samira N." class="testimonial-avatar" loading="lazy">
                             <div>
-                                <div class="testimonial-name">Alex T.</div>
-                                <div class="testimonial-role">Verified User • Ohio</div>
+                                <div class="testimonial-name">Samira N.</div>
+                                <div class="testimonial-role">Verified User • Miami</div>
                             </div>
                         </div>
                     </div>
@@ -2038,27 +2087,96 @@
     <section class="section-padding lead-section" id="lead" aria-label="Sign Up">
         <div class="container position-relative" style="z-index: 2;">
             <div class="text-center" data-aos="fade-up">
-                <div class="section-label"><span class="line"></span> Get Access <span class="line"></span></div>
-                <h2 class="section-title">Unlock <span class="gradient-text">Exclusive Offers</span></h2>
-                <p class="section-subtitle">Sign up now and get instant access to premium rewards, limited-time sweepstakes, and high-paying offers.</p>
+                <div class="section-label"><span class="line"></span> Get Started <span class="line"></span></div>
+                <h2 class="section-title">Unlock <span class="gradient-text">Exclusive Rewards</span></h2>
+                <p class="section-subtitle">Create your account now and get instant access to thousands of premium rewards and exclusive offers.</p>
             </div>
 
             <div class="lead-card" data-aos="fade-up" data-aos-delay="100">
-                <form id="leadForm" novalidate>
-                    <a href="https://appsave.store/sl/3159w" class="btn btn-grad w-100" style="padding: 16px; font-size: 1rem; margin-top: 0.5rem;">
-                        <i class="fas fa-lock"></i> Unlock Exclusive Offers
-                    </a>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <button class="view-profile-btn" onclick="toggleProfileView()">
+                        <i class="fas fa-user"></i> View Your Profile
+                    </button>
+                    <div id="profileView" style="display: none; margin-top: 1.5rem; padding: 1.5rem; background: rgba(139, 92, 246, 0.05); border-radius: 12px; border: 1px solid rgba(139, 92, 246, 0.1); text-align: left;">
+                        <h4 style="color: #A78BFA; margin-bottom: 1rem;"><i class="fas fa-id-card" style="margin-right: 0.5rem;"></i>Your Profile Dashboard</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem;">Total Earnings</div>
+                                <div style="font-size: 1.1rem; font-weight: 600; color: #4ADE80;">$1,247.50</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem;">Offers Completed</div>
+                                <div style="font-size: 1.1rem; font-weight: 600; color: #60A5FA;">38</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem;">Current Rank</div>
+                                <div style="font-size: 1.1rem; font-weight: 600; color: #FBBF24;">Gold Member</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem;">Next Reward</div>
+                                <div style="font-size: 1.1rem; font-weight: 600; color: #A78BFA;">$250 Target</div>
+                            </div>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(139, 92, 246, 0.1); border-radius: 8px; margin-top: 1rem;">
+                            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Progress to Platinum Status</div>
+                            <div style="width: 100%; height: 8px; background: rgba(139, 92, 246, 0.2); border-radius: 4px; overflow: hidden;">
+                                <div style="width: 65%; height: 100%; background: var(--grad-purple-blue); border-radius: 4px;"></div>
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem;">65% complete</div>
+                        </div>
+                    </div>
+                </div>
+                <form id="leadForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating-custom">
+                                <input type="text" class="form-input-custom" id="leadName" placeholder="Your Name" required>
+                                <label for="leadName" style="color: var(--text-muted);">Your Name</label>
+                                <div class="form-error" id="nameError">Name is required</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating-custom">
+                                <input type="email" class="form-input-custom" id="leadEmail" placeholder="Your Email" required>
+                                <label for="leadEmail" style="color: var(--text-muted);">Your Email</label>
+                                <div class="form-error" id="emailError">Valid email is required</div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-floating-custom">
+                                <select class="form-input-custom form-select-custom" id="leadCountry" required>
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="IN">India</option>
+                                    <option value="BR">Brazil</option>
+                                </select>
+                                <label for="leadCountry" style="color: var(--text-muted);">Select Country</label>
+                                <div class="form-error" id="countryError">Country is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                        <a href="https://appsave.store/sl/3159w" class="btn btn-grad w-100" style="padding: 16px; font-size: 1rem;">
+                            <i class="fas fa-bolt"></i> Unlock Exclusive Offers
+                        </a>
+                        <button class="btn btn-outline-grad w-100" style="padding: 16px; font-size: 1rem;" onclick="testProfileAccess()">
+                            <i class="fas fa-desktop"></i> Test Profile Access
+                        </button>
+                    </div>
                     <p class="form-privacy">
                         <i class="fas fa-shield-halved"></i> Your information is 100% secure. By signing up, you agree to our
-                        <a href="https://appsave.store/sl/3159w">Privacy Policy</a> and <a href="https://appsave.store/sl/3159w">Terms & Conditions</a>.
+                        <a href="https://appsave.store/sl/3159w">Privacy Policy</form></a> and <a href="https://appsave.store/sl/3159w">Terms & Conditions</a>.
                     </p>
                 </form>
 
                 <div class="form-success" id="formSuccess">
                     <div class="success-icon"><i class="fas fa-check"></i></div>
-                    <h3 style="font-size: 1.4rem; margin-bottom: 0.75rem;">You're In!</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Check your email for your exclusive access link and start earning rewards today.</p>
-                    <a href="#offers" class="btn btn-grad btn-sm-grad" style="margin-top: 1rem;">Browse Offers Now</a>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0.75rem;">Welcome to the Family!</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Your exclusive rewards dashboard is now unlocked. Start earning today!</p>
+                    <a href="#offers" class="btn btn-grad btn-sm-grad" style="margin-top: 1rem;">Browse Rewards Now</a>
                 </div>
             </div>
         </div>
@@ -2068,8 +2186,8 @@
     <section class="section-padding trust-section" id="trust" aria-label="Trust and Security">
         <div class="container">
             <div class="text-center" data-aos="fade-up">
-                <div class="section-label"><span class="line"></span> Trust & Security <span class="line"></span></div>
-                <h2 class="section-title">Your Safety is <span class="gradient-text">Our Priority</span></h2>
+                <div class="section-label"><span class="line"></span> Enterprise Grade <span class="line"></span></div>
+                <h2 class="section-title">Your Security is <span class="gradient-text">Our Priority</span></h2>
             </div>
 
             <div class="row g-4 mt-2 justify-content-center">
@@ -2079,7 +2197,7 @@
                             <i class="fas fa-lock"></i>
                             <span class="check-badge"><i class="fas fa-check"></i></span>
                         </div>
-                        <h6>SSL Secure</h6>
+                        <h6>SSL Secured</h6>
                         <p>256-bit encryption</p>
                     </div>
                 </div>
@@ -2089,17 +2207,17 @@
                             <i class="fas fa-circle-check"></i>
                             <span class="check-badge"><i class="fas fa-check"></i></span>
                         </div>
-                        <h6>Verified Partners</h6>
-                        <p>100% vetted offers</p>
+                        <h6>Verified Offers</h6>
+                        <p>1000+ tested offers</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="trust-badge">
                         <div class="trust-icon trust-icon-privacy">
                             <i class="fas fa-user-shield"></i>
                             <span class="check-badge"><i class="fas fa-check"></i></span>
                         </div>
-                        <h6>Privacy Protected</h6>
+                        <h6>Privacy Guard</h6>
                         <p>GDPR compliant</p>
                     </div>
                 </div>
@@ -2109,8 +2227,8 @@
                             <i class="fas fa-globe"></i>
                             <span class="check-badge"><i class="fas fa-check"></i></span>
                         </div>
-                        <h6>Trusted Worldwide</h6>
-                        <p>50+ countries</p>
+                        <h6>Trusted Globally</h6>
+                        <p>150+ countries</p>
                     </div>
                 </div>
             </div>
@@ -2124,7 +2242,7 @@
             <div class="footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center text-md-start">
-                        <p>&copy; 2025 PremiumRewards. All rights reserved.</p>
+                        <p>&copy; 2025 RewardVault. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <p>
@@ -2142,7 +2260,7 @@
     <!-- ===== STICKY MOBILE CTA ===== -->
     <div class="sticky-mobile-cta" id="stickyMobileCta">
         <a href="https://www.c2ufgtrk.com/9S43JCZ/387F6NW6/" class="btn btn-grad">
-            <i class="fas fa-bolt"></i> Claim Your ADV Rewards Now
+            <i class="fas fa-bolt"></i> Claim Your RewardVault Access Now
         </a>
     </div>
 
@@ -2156,15 +2274,15 @@
     </div>
 
     <!-- ===== EXIT INTENT POPUP ===== -->
-    <div class="exit-popup-overlay" id="exitPopup" role="dialog" aria-modal="true" aria-label="Special offer popup">
+    <div class="exit-popup-overlay" id="exitPopup" role="dialog" aria-modal="true" aria-label="Exclusive offer popup">
         <div class="exit-popup">
             <button class="exit-popup-close" id="exitPopupClose" aria-label="Close popup"><i class="fas fa-xmark"></i></button>
             <div class="exit-popup-icon"><i class="fas fa-gift"></i></div>
             <h3>Wait! Don't Miss Out</h3>
-            <p>Get exclusive access to premium offers worth $500+ when you sign up now. This invitation expires soon.</p>
+            <p>Get exclusive access to premium rewards worth $1000+ when you sign up now. This invitation expires soon.</p>
             <input type="email" class="form-input-custom" id="exitEmail" placeholder="Enter your email for instant access" aria-label="Email for popup offer">
             <button class="btn btn-grad-pink btn-grad w-100" id="exitSubmit" style="margin-top: 0.5rem;">
-                <i class="fas fa-bolt"></i> Unlock $500+ in Offers
+                <i class="fas fa-bolt"></i> Unlock $1000+ in Rewards
             </button>
             <p class="form-privacy" style="margin-top: 0.75rem;">No spam. Unsubscribe anytime.</p>
         </div>
@@ -2181,6 +2299,23 @@
             once: true,
             offset: 80
         });
+
+        // ===== VIEW PROFILE FUNCTION =====
+        function toggleProfileView() {
+            const profileView = document.getElementById('profileView');
+            if (profileView) {
+                if (profileView.style.display === 'none' || profileView.style.display === '') {
+                    profileView.style.display = 'block';
+                    profileView.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    profileView.style.display = 'none';
+                }
+            }
+        }
+
+        function testProfileAccess() {
+            alert('View Profile button clicked! Profile access granted.\n\nYou have access to your personalized dashboard with earnings statistics, progress tracking, and exclusive rewards.');
+        }
 
         // ===== NAVBAR =====
         const nav = document.getElementById('mainNav');
@@ -2354,7 +2489,6 @@
 
         // ===== LEAD FORM =====
         const leadForm = document.getElementById('leadForm');
-        const formSuccess = document.getElementById('formSuccess');
 
         leadForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -2389,7 +2523,7 @@
 
             if (isValid) {
                 leadForm.style.display = 'none';
-                formSuccess.classList.add('visible');
+                document.getElementById('formSuccess').classList.add('visible');
             }
         });
 
@@ -2404,14 +2538,14 @@
 
         // ===== RECENT ACTIVITY NOTIFICATIONS =====
         const activities = [
-            { name: 'Sarah from NY', action: 'earned $50 in rewards', time: '2 min ago', seed: 'act1' },
-            { name: 'Mike from CA', action: 'claimed a $100 gift card', time: '5 min ago', seed: 'act2' },
-            { name: 'Jessica from TX', action: 'won today\'s sweepstakes', time: '8 min ago', seed: 'act3' },
-            { name: 'David from FL', action: 'completed 3 surveys ($15)', time: '12 min ago', seed: 'act4' },
-            { name: 'Emma from IL', action: 'installed 5 apps ($75)', time: '15 min ago', seed: 'act5' },
+            { name: 'Sarah from NY', action: 'earned $75 in rewards', time: '2 min ago', seed: 'act1' },
+            { name: 'Mike from CA', action: 'claimed a $200 gift card', time: '5 min ago', seed: 'act2' },
+            { name: 'Jessica from TX', action: 'won a $150 sweepstakes', time: '8 min ago', seed: 'act3' },
+            { name: 'David from FL', action: 'completed 3 surveys ($25)', time: '12 min ago', seed: 'act4' },
+            { name: 'Emma from IL', action: 'installed 5 apps ($100)', time: '15 min ago', seed: 'act5' },
             { name: 'Chris from OH', action: 'earned $30 cashback', time: '18 min ago', seed: 'act6' },
-            { name: 'Ashley from PA', action: 'got matched with a credit card ($50)', time: '22 min ago', seed: 'act7' },
-            { name: 'Tom from WA', action: 'completed a survey ($8)', time: '25 min ago', seed: 'act8' }
+            { name: 'Ashley from PA', action: 'got matched with a credit card ($75)', time: '22 min ago', seed: 'act7' },
+            { name: 'Tom from WA', action: 'completed a survey ($10)', time: '25 min ago', seed: 'act8' }
         ];
 
         const notif = document.getElementById('activityNotification');
@@ -2461,7 +2595,7 @@
             if (exitEmail.value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(exitEmail.value)) {
                 exitPopup.querySelector('.exit-popup-icon').innerHTML = '<i class="fas fa-check"></i>';
                 exitPopup.querySelector('h3').textContent = 'You\'re In!';
-                exitPopup.querySelector('p').textContent = 'Check your email for your exclusive access link.';
+                exitPopup.querySelector('p').textContent = 'Check your email for your exclusive access link and start earning rewards today.';
                 exitSubmit.textContent = 'Redirecting...';
                 exitSubmit.disabled = true;
                 setTimeout(() => exitPopup.classList.remove('visible'), 2500);
